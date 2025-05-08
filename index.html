@@ -1,51 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <style>
-      * {
-        box-sizing: border-box;
-      }
-    </style>
-  </head>
 
-  <body>
-    <!-- big Container -->
-    <div style="position: relative; display: inline-block">
-      <!-- small Container -->
-      <div
-        style="
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- big Container -->
+  <div style="position: relative; display: inline-block">
+    <!-- small Container -->
+    <div style="
           position: absolute;
           display: flex;
           width: 100%;
           align-items: center;
           padding: 20px;
-        "
-      >
-        <!-- playerHealth -->
-        <div
-          style="
+        ">
+      <!-- playerHealth -->
+      <div style="
             position: relative;
             height: 20px;
             width: 100%;
             display: flex;
             justify-content: flex-end;
-          "
-        >
-          <div
-            style="
+          ">
+        <div style="
               background-color: rgba(214, 1, 1, 0.48);
               height: 20px;
               width: 100%;
               border-radius: 8px;
-            "
-          ></div>
-          <div
-            id="playerHealth"
-            style="
+            "></div>
+        <div id="playerHealth" style="
               position: absolute;
               background-color: blue;
               top: 0;
@@ -54,13 +47,10 @@
               bottom: 0;
               width: 100%;
               border-radius: 8px;
-            "
-          ></div>
-        </div>
-        <!-- Timer -->
-        <div
-          id="timer"
-          style="
+            "></div>
+      </div>
+      <!-- Timer -->
+      <div id="timer" style="
             background-color: rgba(23, 126, 90, 0.48);
             width: 100px;
             height: 70px;
@@ -75,23 +65,18 @@
             font-weight: 900;
             color: aliceblue;
             border-radius: 25%;
-          "
-        >
-          100
-        </div>
-        <!-- Enemy Health -->
+          ">
+        100
+      </div>
+      <!-- Enemy Health -->
 
-        <div style="position: relative; height: 20px; width: 100%">
-          <div
-            style="
+      <div style="position: relative; height: 20px; width: 100%">
+        <div style="
               background-color: rgba(214, 1, 1, 0.48);
               height: 20px;
               border-radius: 8px;
-            "
-          ></div>
-          <div
-            id="enemyHealth"
-            style="
+            "></div>
+        <div id="enemyHealth" style="
               position: absolute;
               background-color: blue;
               top: 0;
@@ -99,13 +84,10 @@
               left: 0;
               bottom: 0;
               border-radius: 8px;
-            "
-          ></div>
-        </div>
+            "></div>
       </div>
-      <div
-        id="resultOfGame"
-        style="
+    </div>
+    <div id="resultOfGame" style="
           position: absolute;
           color: aliceblue;
           margin: 4px;
@@ -122,20 +104,39 @@
           left: 0;
           right: 0;
           display: none;
-        "
-      >
-        Tie
-      </div>
-      <canvas></canvas>
+        ">
+      Tie
     </div>
-    <div>
-      NOTE: How To Play ? <br />Player 1 : can use (q , space , e ,r ) to fight
-      && (w , a,d) to move and jump <br />Player 2 : can use (arrow-down ,
-      <b> , </b> , . , / ) && (arrow-right , arrow-left, arrow-up ) to move and
-      jump
-    </div>
-    <script src="./js/utls.js"></script>
-    <script src="./js/classes.js "></script>
-    <script src="./index.js"></script>
-  </body>
+
+    <!-- game over -->
+    <button id="restartBtn" style="
+        position: absolute;
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 42px;
+        background-color: transparent;
+        border-color: transparent;
+        color: white;
+        padding: 10px 20px;
+        cursor: pointer;
+        display: none;
+        z-index: 100;
+      ">Restart</button>
+    <canvas></canvas>
+  </div>
+  <div>
+    NOTE: How To Play ? <br />Player 1 : can use (q , space , e ,r ) to fight
+    && (w , a,d) to move and jump <br />Player 2 : can use (arrow-down ,
+    <b> , </b> , . , / ) && (arrow-right , arrow-left, arrow-up ) to move and
+    jump
+  </div>
+
+
+
+  <script src="./js/utls.js"></script>
+  <script src="./js/classes.js "></script>
+  <script src="./index.js"></script>
+</body>
+
 </html>

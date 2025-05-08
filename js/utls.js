@@ -22,6 +22,11 @@ function determinWinner({ player, enmy, timerId }) {
   } else if (player.health < enmy.health) {
     document.querySelector("#resultOfGame").innerHTML = "Player 2 Wins";
   }
+
+  // gameOver
+  document.querySelector("#restartBtn").style.display = "block";
+  document.querySelector("#restartBtn").onclick = () => location.reload();
+
 }
 let timer = 51;
 let timerId;
